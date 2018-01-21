@@ -55,9 +55,8 @@ function total() {
 }	
 
 function removeFromCart(item) {
-  var newArr = [];
   for (i = 0; i< cart.length; i++) {
-			newArr = [... Object.keys(cart[i])];
+			if (cart[i] )
   }
 } 
 
