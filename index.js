@@ -54,22 +54,7 @@ function total() {
 	return sum;
 }	
 
-function removeFromCart(itemName) {
-  var cart = getCart(); // func provided, so use it to access global "cart"
 
-  if (cart.length !== 0) { // cart has items
-    for (var i = 0; i < cart.length; i++) {
-      if (cart[i].hasOwnProperty(itemName) === true) {
-        cart.splice(i, 1); //throw away return value (deleted array entry)
-      }
-    }
-  } else { // nothing in the cart;
-    console.log("That item is not in your cart.");
-  }
-  
-  return cart;
-}
-/*
 function removeFromCart(item) {
   for (var i = 0; i< cart.length; i++) {
 			if (!cart[i].hasOwnProperty(item)) {
@@ -77,7 +62,8 @@ function removeFromCart(item) {
 			}
   }
 } 
-*/
+
+
 function placeOrder(cardNumber) {
   if (cardNumber === undefined) {
     console.log(`Sorry, we don't have a credit card on file for you.`)
